@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* let custo = prompt("informe o custo por km rodado (em R$) do seu veículo")
+        console.log(custo);
+        if (custo < 0){
+            alert("Valor não permitido");
+        } else {
+         custo;
+        }*/
+        // storar o valor e nao permitir ele ser nagativo
+
+        //let cidade1 = console.log(prompt("informe o nome da cidade de origem:"));
+        //let cidade2 = console.log(prompt("informe o nome da cidade de destino:"));
+
+
+        getData()
+
+        async function getData() {
+            const response = await fetch('distancias.csv');
+            // promessa para receber todos os dados
+            const data = await response.text();
+            // resposta para a promessa
+
+            const table = data.split('\n').slice(1);
+            //dividindo as as linhas do arquivo em um array e retirando o [0]
+            table.forEach(row => {
+                const columns = row.split(';');
+                // para cada linha do array dividir pelas ';'
+                const aracaju  = columns[0]
+                
+                console.log(columns);
+            })
+        }
+        
+    </script>
+</body>
+</html>
