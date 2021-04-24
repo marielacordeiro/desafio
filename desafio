@@ -51,18 +51,18 @@
 
                     let nao_existe = false;
                     if (!(origem in distancias)) {
-                        console.log("a cidade " + origem + " nao é válida!!!!!!")
+                        console.log("a cidade " + origem + " nao é válida!")
                         nao_existe = true
                     }
                     if (!(destino in distancias)) {
-                        console.log("a cidade " + destino + " nao é válida!!!!!!!!!")
+                        console.log("a cidade " + destino + " nao é válida")
                         nao_existe = true
                     }
                     if (nao_existe) { return null }
 
                     dist = parseInt(distancias[origem][destino])
                     os_km += dist
-                    console.log('indo de ' + origem + ' para dar role em ' + destino + ' e vamo andar ' + dist + 'km')
+                    console.log('indo de ' + origem + ' para dar role em ' + destino + ' e vamos andar ' + dist + 'km')
                 }
                 return os_km
             };
